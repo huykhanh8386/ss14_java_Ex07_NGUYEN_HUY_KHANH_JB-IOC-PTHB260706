@@ -1,0 +1,22 @@
+package Ex07;
+public class OrderMath {
+    public int calculateAveragePrice(int totalPrice, int itemCount) {
+        try {
+            return totalPrice / itemCount;
+        } catch (ArithmeticException e) {
+            System.out.println("Khách chưa mua hàng");
+            return 0;
+        }
+    }
+    public int calculateAverageFromCart(int[] cart) {
+        if (cart == null) {
+            System.out.println("Giỏ hàng không tồn tại");
+            return 0;
+        }
+        int totalPrice = 0;
+        for (int price : cart) {
+            totalPrice += price;
+        }
+        return calculateAveragePrice(totalPrice, cart.length);
+    }
+}
