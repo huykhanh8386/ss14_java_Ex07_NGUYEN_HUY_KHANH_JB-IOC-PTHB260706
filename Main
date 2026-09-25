@@ -1,0 +1,19 @@
+package Ex07;
+public class Main {
+    public static void main(String[] args) {
+        OrderMath orderMath = new OrderMath();
+        System.out.println("===== HỆ THỐNG TÍNH TRUNG BÌNH GIỎ HÀNG =====");
+        int[] cart1 = {100000, 200000, 300000};
+        System.out.println("\n1. Giỏ hàng bình thường:");
+        int average1 = orderMath.calculateAverageFromCart(cart1);
+        System.out.println("Giá trung bình: " + average1 + " VNĐ");
+        int[] cart2 = {};
+        System.out.println("\n2. Giỏ hàng rỗng:");
+        int average2 = orderMath.calculateAverageFromCart(cart2);
+        System.out.println("Giá trung bình: " + average2 + " VNĐ");
+        int[] cart3 = null;
+        System.out.println("\n3. Giỏ hàng null:");
+        int average3 = orderMath.calculateAverageFromCart(cart3);
+        System.out.println("Giá trung bình: " + average3 + " VNĐ");
+    }
+}
